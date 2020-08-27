@@ -117,7 +117,7 @@ public class WxAddressController extends GetRegionService {
 	}
 
 	/**
-	 * 添加或更新收货地址
+	 * 添加或更新收货地址 todo
 	 *
 	 * @param userId  用户ID
 	 * @param address 用户收货地址

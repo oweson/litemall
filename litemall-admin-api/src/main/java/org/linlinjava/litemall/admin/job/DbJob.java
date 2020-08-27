@@ -23,8 +23,8 @@ public class DbJob {
     @Autowired
     private Environment environment;
 
-    /*
-     * 定时时间是每天凌晨5点。
+    /**
+     * 1 定时时间是每天凌晨5点。
      */
     @Scheduled(cron = "0 0 5 * * ?")
     public void backup() throws IOException {
@@ -35,7 +35,8 @@ public class DbJob {
         String url = environment.getProperty("spring.datasource.druid.url");
         int index1 = url.indexOf("3306/");
         int index2 = url.indexOf("?");
-        String db = url.substring(index1+5, index2);
+        // todo 截取数据库的名字,不定长！
+        String db = url.substring(index1 + 5, index2);
 
         LocalDate localDate = LocalDate.now();
         String fileName = localDate.toString();
