@@ -2,6 +2,8 @@ package org.linlinjava.litemall.admin;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.linlinjava.litemall.db.dao.GoodsProductMapper;
+import org.linlinjava.litemall.db.dao.LitemallCardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.env.Environment;
@@ -18,6 +20,15 @@ import java.time.LocalDate;
 public class DbTest {
     @Autowired
     private Environment environment;
+
+    @Autowired
+
+    private LitemallCardMapper litemallCardMapper;
+
+    @Test
+    public void list(){
+        System.out.println(litemallCardMapper.selectByExample(null));
+    }
 
     @Test
     public void test() {
