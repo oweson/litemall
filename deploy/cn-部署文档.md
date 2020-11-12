@@ -1,0 +1,1 @@
+1 idea直接启动litemall-all 否则前端无法启动！
